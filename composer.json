@@ -1,0 +1,11 @@
+{
+    "name": "acme/prometheus",
+    "require": {
+        "phpunit/phpunit": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prometheus\\": "./src"
+        }
+    }
+}
