@@ -63,7 +63,7 @@ class WeatherForecaster
     {
         if (self::$cache->has($city)) {
             $response = self::$cache->get($city);
-            if(strtotime($response->current->last_updated) > (time()-60) && count($response->forecast->forecastday) == $days ) {
+            if(strtotime($response->current->last_updated) > (time()-60*60) && count($response->forecast->forecastday) == $days ) {
                 return $response;
             }
         } 
